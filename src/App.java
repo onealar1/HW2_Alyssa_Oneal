@@ -10,12 +10,14 @@ public class App extends Application{
         cs3331TicTacToeFrame frame = new cs3331TicTacToeFrame(stage);
      
         // Add the game here to the frame
-     
-        
+        MyTicTacToe game = new MyTicTacToe();
+        frame.addGame(game); 
+
 
     }
     public static void main(String[] args) throws Exception {
         launch(args);
     }
+
 }
 
