@@ -1,7 +1,4 @@
 import cs3331Helper.cs3331TicTacToePlayer;
-import cs3331Helper.cs3331TicTacToeSquare;
-import cs3331Helper.cs3331TicTacToeController;
-
 public class Players implements cs3331TicTacToePlayer{
 
     private String playerIcon;
@@ -12,10 +9,9 @@ public class Players implements cs3331TicTacToePlayer{
 
     @Override
     public void selectSquare(int row, int column) {
-        cs3331TicTacToeSquare square = new cs3331TicTacToeSquare();
-        cs3331TicTacToeController controller = new cs3331TicTacToeController();
-        square.markSquare(playerIcon);
-        controller.finishedTurn();
+        MyTicTacToe.board.squareAt(row, column).markSquare(playerIcon);
+        MyTicTacToe.controller.setControllerMessage("Player " + this.playerIcon + " finished their turn.");
+        MyTicTacToe.controller.finishedTurn();
     }
     
 }
