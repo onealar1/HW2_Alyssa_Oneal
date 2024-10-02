@@ -11,7 +11,7 @@ public class MyTicTacToe implements cs3331TicTacToeGame{
 
     private cs3331TicTacToeBoard board = new cs3331TicTacToeBoard();
     private cs3331TicTacToeController controller = new cs3331TicTacToeController();
-    private cs3331TicTacToeSquare square = new cs3331TicTacToeSquare();
+    public cs3331TicTacToeSquare square = new cs3331TicTacToeSquare();
     private Players player1 = new Players("X");
     private Players player2 = new Players("O");
     

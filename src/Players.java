@@ -1,10 +1,10 @@
 import cs3331Helper.cs3331TicTacToePlayer;
 import cs3331Helper.cs3331TicTacToeSquare;
+import cs3331Helper.cs3331TicTacToeController;
 
 public class Players implements cs3331TicTacToePlayer{
 
     private String playerIcon;
-    private cs3331TicTacToeSquare square = new cs3331TicTacToeSquare();
 
     public Players(String playerIcon) {
         this.playerIcon = playerIcon;
@@ -12,7 +12,10 @@ public class Players implements cs3331TicTacToePlayer{
 
     @Override
     public void selectSquare(int row, int column) {
+        cs3331TicTacToeSquare square = new cs3331TicTacToeSquare();
+        cs3331TicTacToeController controller = new cs3331TicTacToeController();
         square.markSquare(playerIcon);
+        controller.finishedTurn();
     }
     
 }
